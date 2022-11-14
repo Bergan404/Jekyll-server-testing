@@ -1,5 +1,5 @@
 # Setting Up Directory with Ruby / Jekyll
-- Run in the Terminal *jekyll new <name>*
+- Run in the Terminal *jekyll new <name> --blank* this makes a new jekyll site with no theme attached to it
 
 - DOCS "https://gmcmillan100.github.io/docs/jekyll/"
 - KIll localhost "http://carolinabadas.com/address-already-in-use-bind2-for-127-0-0-1-port-3000-errnoeaddrinuse-check-what-process-is-running-in-your-localhost/"
