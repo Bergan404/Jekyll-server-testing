@@ -11,12 +11,15 @@
 
 <body>
     <h1 class="title">Title</h1>
-
-    <p id="demo"></p>
+    <div>
+        <p>Shell ~:</p>
+        <p id="demo"></p>
+    </div>
+    <p id="hostname" style="display: none;">Bergan Oudshoorn</p>
 
     <script>
         var i = 0;
-        var txt = 'Lorem ipsum dummy text blabla.';
+        var txt = 'hostname';
         var speed = 50;
 
         // Set the timeout to 5 seconds so this text will appear after 5 seonds of page load
@@ -27,7 +30,15 @@
                 setTimeout(typeWriter, speed);
             }
         }, 5000)
+
+        function displayHostname() {
+            if (txt.length) {
+                document.getElementById("hostname").style.display = "block"
+            }
+
+        }
         window.onload = typeWriter()
+        window.onload = displayHostname()
     </script>
 
 </body>
