@@ -10,36 +10,83 @@
 </head>
 
 <body>
-    <h1 class="title">Title</h1>
-    <div>
-        <p>Shell ~:</p>
-        <p id="demo"></p>
-    </div>
-    <p id="hostname" style="display: none;">Bergan Oudshoorn</p>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="inner-nav">
+            <ul class="menu">
+                <li class="menu-item"><a href="">About Me</a></li>
+                <li class="menu-item"><a href="">Projects</a></li>
+                <li class="menu-item"><a href="">Skilla</a></li>
+                <li class="menu-item"><a href="">Contact</a></li>
+                <li class="menu-item"><a href="">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <script>
-        var i = 0;
-        var txt = 'hostname';
-        var speed = 50;
+    <!-- Hero Section -->
+    <section class="container-fluid hero-section">
+        <div class="hostname">
+            <p>Shell ~:</p>
+            <p id="hostname_text"></p>
+        </div>
+        <p id="hostname" style="display: none;">Bergan Oudshoorn</p>
 
-        // Set the timeout to 5 seconds so this text will appear after 5 seonds of page load
-        setTimeout(function typeWriter() {
-            if (i < txt.length) {
-                document.getElementById("demo").innerHTML += txt.charAt(i);
-                i++;
-                setTimeout(typeWriter, speed);
+        <div class="occupation">
+            <p id="shell-two" style="display: none;">Shell ~:</p>
+            <p id="occupation_text"></p>
+        </div>
+        <p id="occupation" style="display: none;">Software Developer</p>
+
+
+        <script>
+            var i = 0;
+            var o = 0;
+            var hostname = 'hostname';
+            var occupation = 'occupation';
+            var speed = 50;
+
+            // Set the timeout to 5 seconds so this text will appear after 5 seonds of page load
+
+            // Types out hostname
+            function typeWriter() {
+                if (i < hostname.length) {
+                    document.getElementById("hostname_text").innerHTML += hostname.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
             }
-        }, 5000)
+            // displays name
+            function displayHostname() {
 
-        function displayHostname() {
-            if (txt.length) {
-                document.getElementById("hostname").style.display = "block"
+                document.getElementById('hostname').style.display = 'block'
+                document.getElementById('shell-two').style.display = 'block'
+
             }
 
-        }
-        window.onload = typeWriter()
-        window.onload = displayHostname()
-    </script>
+            // types out occupation
+            function typeWriter2() {
+                if (o < occupation.length) {
+                    document.getElementById("occupation_text").innerHTML += occupation.charAt(o);
+                    o++;
+                    setTimeout(typeWriter2, speed);
+                    console.log(typeWriter)
+                }
+            }
+            // displays occupation
+            function displayOccupation() {
+
+                document.getElementById('occupation').style.display = 'block'
+
+            }
+
+            window.onload = function () {
+                setTimeout(typeWriter, 3000);
+                setTimeout(displayHostname, 4000);
+                setTimeout(typeWriter2, 5000);
+                setTimeout(displayOccupation, 6000);
+            }
+        </script>
+    </section>
 
 </body>
 
