@@ -17,6 +17,8 @@ body {
   background-color: transparent;
   position: absolute;
   top: 0;
+  right: 0;
+  margin-right: 2em;
 
   .inner-nav {
     .menu {
@@ -27,12 +29,14 @@ body {
         list-style: none;
 
         a {
+          text-transform: uppercase;
+          font-size: 1.2em;
           color: violet;
           text-decoration: none;
           transition: .2s all ease-in-out;
 
           &:hover {
-            color: blue;
+            color: rgb(253, 211, 253);
           }
         }
       }
