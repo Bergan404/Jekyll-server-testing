@@ -11,6 +11,7 @@
 - In the Gem File add gems that you want to use with *gem 'jekyll', '~> 4.3', '>= 4.3.1'*
 - Once Gems are added run *bundle install*
 - Once all that is done and ready use *bundle exec jekyll serve* (The server will run on port 4000)
+- *jekyll serve*
 - Load up *http://localhost:4000/* to see all the changes being made
 
 # Using Browser Sync with Jekyll
@@ -36,3 +37,6 @@
 ```
 - After running *bundle* it will then all be configured as a css file within the _site directory
 - All html Elements will be edited on the index.html
+
+
+<!-- Want a section where it states I went from cars to code seems simple enough -->
